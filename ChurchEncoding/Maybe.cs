@@ -27,9 +27,7 @@ namespace Ploeh.Samples.ChurchEncoding
             this IMaybe<T> source,
             Func<T, TResult> selector)
         {
-            return source.Match<IMaybe<TResult>>(
-                nothing :   new Nothing<TResult>(),
-                just : x => new Just<TResult>(selector(x)));
+            return new MaybeSelected<T, TResult>(source, selector);
         }
 
         // Monad
