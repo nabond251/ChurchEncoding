@@ -33,9 +33,7 @@ namespace Ploeh.Samples.ChurchEncoding
         // Monad
         public static IMaybe<T> Flatten<T>(this IMaybe<IMaybe<T>> source)
         {
-            return source.Match(
-                nothing :   new Nothing<T>(),
-                just : x => x);
+            return new MaybeFlattened<T>(source);
         }
 
         public static IMaybe<TResult> SelectMany<T, TResult>(

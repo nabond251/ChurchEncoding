@@ -64,6 +64,7 @@
     <Compile Include="IChurchBoolean.cs" />
     <Compile Include="IMaybe.cs" />
     <Compile Include="INaturalNumber.cs" />
+    <Compile Include="MaybeFlattened.cs" />
     <Compile Include="MaybeSelected.cs" />
     <Compile Include="Just.cs" />
     <Compile Include="Maybe.cs" />
